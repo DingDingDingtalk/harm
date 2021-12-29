@@ -113,10 +113,16 @@ function out() {
         value[i - 1] = document.getElementById("" + i).value;
         console.log("%lf", value[i - 1]);
     }//获得输入框内的值
-    value[5]=1.5*(1+value[5]+value[6]);
     var result = 1;
     for (i = 0; i < 6; i++) {
         result = mult(result, value[i]);//计算
     }
-    alert("期望伤害为:"+result);
+    if(value[6]==0){
+        alert("期望伤害为:"+mult(result,1.5));
+    }//没有魔女
+    else if(value[6]==1){
+        alert("期望伤害为:"+mult(result,1.725));//
+    }
+    else
+    alert("输入有误");
 }
