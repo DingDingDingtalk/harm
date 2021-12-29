@@ -113,8 +113,9 @@ function out() {
         value[i - 1] = document.getElementById("" + i).value;
         console.log("%lf", value[i - 1]);
     }//获得输入框内的值
+    value[5]=1.5*(1+value[5]+value[6]);
     var result = 1;
-    for (i = 0; i < 7; i++) {
+    for (i = 0; i < 6; i++) {
         result = mult(result, value[i]);//计算
     }
     alert("期望伤害为:"+result*1.5);//1.5倍率
