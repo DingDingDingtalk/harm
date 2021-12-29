@@ -118,5 +118,5 @@ function out() {
     for (i = 0; i < 6; i++) {
         result = mult(result, value[i]);//计算
     }
-    alert("期望伤害为:"+result*1.5);//1.5倍率
+    alert("期望伤害为:"+result);
 }
